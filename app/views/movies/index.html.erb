@@ -1,12 +1,10 @@
-<div class="container">
-  <h2 align="center">Películas</h2>
-  <%= link_to new_movie_path, class:"text-decoration-none" do %>
-    <i class="fa fa-plus-circle fs-4"></i>
-    <span>Película</span>
-  <% end %>
-  <div id="movies">
-    <div class="row">
-      <%= render @movies %>
-    </div>
+<h2 align="center">Películas</h2>
+<%= link_to new_movie_path, class:"text-decoration-none" do %>
+  <i class="fa fa-plus-circle fs-4"></i>
+  <span>Película</span>
+<% end %>
+<div id="movies">
+  <div class="row">
+    <%= render @movies %>
   </div>
 </div>
