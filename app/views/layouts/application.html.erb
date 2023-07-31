@@ -12,7 +12,8 @@
 
   <body>
     <%= render "shared/navbar" %>
-    <div class="container">
+    <%= render 'shared/flashes' %>
+    <div class="container my-5">
       <%= yield %>
     </div>
     <script src="https://kit.fontawesome.com/6b8f0c7049.js" crossorigin="anonymous"></script>
