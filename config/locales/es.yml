@@ -6,6 +6,13 @@ es:
   clients:
     create:
       notice: "Cliente creado exitosamente"
+    update:
+      notice: "Cliente actualizado exitosamente"
+  movies:
+    create:
+      notice: "Película creada exitosamente"
+    update:
+      notice: "Película actualizada exitosamente"
   helpers:
     submit:
       create: "Crear %{model}"

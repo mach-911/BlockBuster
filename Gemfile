@@ -76,3 +76,5 @@ gem "faker", "~> 2.23"
 gem "cssbundling-rails", "~> 1.1"
 
 gem "jsbundling-rails", "~> 1.0"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
