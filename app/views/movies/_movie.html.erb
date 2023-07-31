@@ -1,0 +1,16 @@
+<div class="col-4 py-2">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= movie.name %></h5>
+      <% if movie.id.to_s==params[:id] %>
+        <% if movie.client.present? %>
+          <div>Arrendada por <%= movie.client.name %></div>
+        <% else %>
+          <div class="text-success">Disponible para arriendo</div>
+        <% end %>
+      <% else %>
+        <%= link_to "Ver película" , movie, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

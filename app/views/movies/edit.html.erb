@@ -1,0 +1,7 @@
+<h2 align="center">Editar película</h2>
+<%= render "form", movie: @movie %>
+<br>
+<div align="center">
+  <%= link_to "Volver a películas" , movies_path, class: "btn btn-info col-10 col-md-3" %>
+  <%= link_to "Ver película" , @movie, class: "btn btn-primary col-10 col-md-3 mt-2 mt-md-0" %>
+</div>

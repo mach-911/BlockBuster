@@ -1,0 +1,13 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+<%= render @movie %>
+<div>
+  <%= link_to edit_movie_path(@movie), class: "btn btn-warning" do %>
+    <i class="fa fa-pen"></i>
+  <% end %>
+  <%= link_to "Volver to películas" , movies_path, class: "btn btn-info" %>
+  <%= link_to @movie, class: "btn btn-danger" , data: {turbo_method: :delete, turbo_confirm: "¿Seguro de eliminar la película #{@movie.name}?"} do %>
+      <i class="fa fa-times text-light"></i>
+  <% end %>
+</div>

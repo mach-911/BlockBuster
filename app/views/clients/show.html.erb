@@ -1,0 +1,16 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Nombre: <%= @client.name %></h5>
+    <p class="card-text">Películas arrendadas:</p>
+    <%= select_tag 'movies' , options_for_select(@client.movies.present? ? @client.movies : ["No tiene películas aún"]),
+      class: 'form-select' %>
+  </div>
+  <div class="card-footer">
+    <%= link_to "Volver a clientes" , clients_path, class: "btn btn-info" %>
+    <%= link_to "Editar cliente" , edit_client_path(@client), class: "btn btn-warning" %>
+    <%= link_to "Eliminar cliente" , @client, class: "btn btn-danger" , data: {turbo_method: :delete, turbo_confirm: "¿Seguro de eliminar el cliente #{@client.name}?"} %>
+  </div>
+</div>

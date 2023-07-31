@@ -1,0 +1,26 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+<div class="container">
+  <h1 align="center" class="">Clientes</h1>
+  <%= link_to new_client_path, class:"text-decoration-none" do %>
+    <i class="fa fa-plus-circle fs-4"></i>
+    <span>Cliente</span>
+    <% end %>
+    <div id="clients">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Película</th>
+            <th scope="col" colspan="3"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render @clients %>
+        </tbody>
+      </table>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div id="<%= dom_id client %>">
+  <tr>
+    <th scope="row">
+      <%= client.id %>
+    </th>
+    <td>
+      <%= client.name %>
+    </td>
+    <td>
+      <%= client.age %>
+    </td>
+    <td>
+    <% if client.movies.present? %>
+      <%= select_tag 'movies' , options_for_select(client.movies), class: 'form-select' %>
+    <% else %>
+      No tiene película arrendada
+    <% end %>
+    </td>
+    <td align="center">
+      <%= link_to "Ver cliente" , client, class: 'btn btn-info' %>
+    </td>
+    <td align="center">
+      <%= link_to edit_client_path(client) do %>
+        <i class="fa fa-pen bg-warning rounded p-2 text-dark"></i>
+      <% end %>
+    </td>
+    <td align="center">
+      <%= button_to client, method: :delete, data: { turbo_confirm: "¿Seguro de eliminar al cliente #{client.name}?" }, class: 'border-0 bg-body' do %>
+        <i class="fa fa-times bg-danger rounded p-2 text-light"></i>
+      <% end %>
+    </td>
+  </tr>
+</div>

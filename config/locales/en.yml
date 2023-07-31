@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      client: cliente
+      movie: "película"
+  helpers:
+    submit:
+      create: "Crear %{model}"
+      update: "Actualizar cambios en %{model}"
